@@ -1,5 +1,7 @@
 import QtQuick
 
+import "./CO" as CO
+
 Window {
     width: 1280
     height: 720
@@ -7,12 +9,12 @@ Window {
     flags:  Qt.Window
 
     color:  "#FFFFFF"
-    title: qsTr("EYOC")
+    title: qsTr("oc")
 
     Row {
         spacing: 20
 
-        OCOSymbol {
+        CO.Symbol {
             implicitWidth: 750 * (120/661)
             implicitHeight: 661 * (120/661)
         }
