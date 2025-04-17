@@ -3,6 +3,8 @@ import QtQuick
 import QtQuick.Shapes
 
 Item {
+    property alias color: _qt_shapePath_0.fillColor
+
     implicitWidth: 750
     implicitHeight: 661
     transform: [

@@ -19,8 +19,9 @@ qt_add_qml_module(appco-scenes
     VERSION 1.0
     QML_FILES
         qml/Main.qml
-        qml/OBoxedText.qml
+        qml/CO/BoxedText.qml
         qml/CO/Symbol.qml
+        qml/CO/AnchoredRectangle.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
