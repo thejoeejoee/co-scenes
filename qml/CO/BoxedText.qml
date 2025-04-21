@@ -15,35 +15,39 @@ Item {
     property alias bgColor: background.color
     property alias bgOpacity: background.opacity
 
-    width: 2 * component.hPadding + fm.advanceWidth(text.text)
-
-    AnchoredRectangle {
-        id: background
-
-        width: parent.width
-        height: parent.height
-    }
-
     FontMetrics {
         id: fm
-
         font.pixelSize: component.height - 2 * component.vPadding
     }
 
-    Item {
-        id: wrapper
+    Rectangle {
+        id: background
+        height: component.height
+        width: text.width + 2 * component.hPadding
 
-        width: parent.width
-        height: parent.height
-
-        Text {
-            id: text
-
-            antialiasing: true
-            font.pixelSize: component.height - 2 * component.vPadding
-            anchors.centerIn: parent
-        }
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
     }
+
+    Text {
+        id: text
+
+        antialiasing: true
+        font.pixelSize: component.height - 2 * component.vPadding
+
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.leftMargin: component.hPadding
+    }
+
+    // Item {
+    //     id: wrapper
+    //
+    //     width: parent.width
+    //     height: parent.height
+    //
+    //
+    // }
 }
 
 // Rectangle {
