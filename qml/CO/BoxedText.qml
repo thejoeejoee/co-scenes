@@ -1,13 +1,13 @@
 import QtQuick
 
 Item {
-    id: component
+    id: item
 
     property real hPadding: 8
     property real vPadding: 8
 
     property alias content: text.text
-    property alias size: component.height
+    property alias size: item.height
     property alias color: text.color
 
     property alias text: text
@@ -17,13 +17,13 @@ Item {
 
     FontMetrics {
         id: fm
-        font.pixelSize: component.height - 2 * component.vPadding
+        font.pixelSize: item.height - 2 * item.vPadding
     }
 
     Rectangle {
         id: background
-        height: component.height
-        width: text.width + 2 * component.hPadding
+        height: item.height
+        width: text.width + 2 * item.hPadding
 
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
@@ -33,11 +33,11 @@ Item {
         id: text
 
         antialiasing: true
-        font.pixelSize: component.height - 2 * component.vPadding
+        font.pixelSize: item.height - 2 * item.vPadding
 
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
-        anchors.leftMargin: component.hPadding
+        anchors.leftMargin: item.hPadding
     }
 
     // Item {

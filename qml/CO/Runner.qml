@@ -6,7 +6,7 @@ Rectangle {
     id: runner
 
     property alias content: text.content
-    property bool display: true
+    property bool display: false
 
     property real size: 56
     property real textSlide: 0
